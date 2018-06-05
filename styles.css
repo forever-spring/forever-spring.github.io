@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+
+* {
+    background-color: white;
+}
+
+#langSelec * {
+	font-family: 'Reem Kufi', sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: #FFAF6B;
+    padding: 10vh;
+    border-radius: 20px;
+}
+
+#langSelec {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 99vw;
+    height: 95vh;
+}
