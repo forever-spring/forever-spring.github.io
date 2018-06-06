@@ -9,8 +9,12 @@
     text-decoration: none;
     color: white;
     background-color: #FFAF6B;
-    padding: 10vh;
+    padding: 5vh;
     border-radius: 20px;
+}
+
+#langSelec>*:hover {
+	padding: 10vh;
 }
 
 #langSelec {
