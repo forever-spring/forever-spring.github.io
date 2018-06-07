@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
 
 * {
-    background-color: white;
+    background-color: #5f0009;
 }
 
 #langSelec * {
 	font-family: 'Reem Kufi', sans-serif;
     text-decoration: none;
-    color: white;
-    background-color: #FFAF6B;
+    color: #f92135;
+    background-color: #4de31e;
     padding: 5vh;
     border-radius: 20px;
 }
 
-#langSelec>*:hover {
+#langSelec h1 {
+	box-shadow: 5px 5px 5px #145300;
+}
+
+#langSelec h1:hover {
 	padding: 10vh;
+    box-shadow: 10px 10px 10px #145300;
 }
 
 #langSelec {
