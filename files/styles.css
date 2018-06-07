@@ -9,11 +9,11 @@
     text-decoration: none;
     color: #f92135;
     background-color: #4de31e;
-    padding: 5vh;
     border-radius: 20px;
 }
 
 #langSelec h1 {
+    padding: 5vh;
 	box-shadow: 5px 5px 5px #145300;
 }
 
@@ -29,4 +29,16 @@
     justify-content: space-around;
     width: 99vw;
     height: 95vh;
+}
+
+.sidebar {
+    margin: 0px;
+    border-right: 2px solid #145300;
+    border-left: 2px solid #145300;
+}
+
+.topbar {
+    margin: 0px;
+    border-bottom: 2px solid #145300;
+    border-top: 2px solid #145300;
 }
