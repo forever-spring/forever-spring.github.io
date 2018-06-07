@@ -1,8 +1,16 @@
+/*
+    GENERAL RULES
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
 
 * {
     background-color: #5f0009;
 }
+
+/*
+    INDEX FILE RULES
+*/
 
 #langSelec * {
 	font-family: 'Reem Kufi', sans-serif;
@@ -31,14 +39,44 @@
     height: 95vh;
 }
 
-.sidebar {
-    margin: 0px;
-    border-right: 2px solid #145300;
-    border-left: 2px solid #145300;
+/*
+    HOME PAGE RULES
+*/
+
+
+header, header * {
+    background-color: #2bb100;
 }
 
-.topbar {
-    margin: 0px;
-    border-bottom: 2px solid #145300;
-    border-top: 2px solid #145300;
+header h1 {
+    color: #f92135;
+}
+
+
+#menu {
+	display: none;
+}
+
+#openMenu:hover #menu {
+	display: block;
+}
+
+#logo {
+	max-width: 50%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
