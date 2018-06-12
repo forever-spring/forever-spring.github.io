@@ -3,38 +3,57 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+:root {
+    --p1: #9fb9f6;
+    --p2: #6490f3;
+    --p3: #2e6af3;
+    --p4: #034bf1;
+    --c1: #ffdd9a;
+    --c2: #ffc758;
+    --c3: #ffb219;
+    --c4: #ffaa00;
+}
 
 * {
-    background-color: #5f0009;
+    background-color: var(--p4);
+    box-sizing: border-box;
+    margin: 0px;
 }
 
 /*
     INDEX FILE RULES
 */
 
-#langSelec * {
+#langSelec a {
 	font-family: 'Reem Kufi', sans-serif;
     text-decoration: none;
-    color: #f92135;
-    background-color: #4de31e;
+    color: white;
+    background-color: rgba(255,255,255,0);
+}
+
+#langSelec h1 {
+	background-color: rgba(255,255,255,0.2);
     border-radius: 20px;
 }
 
 #langSelec h1 {
     padding: 5vh;
-	box-shadow: 5px 5px 5px #145300;
+	box-shadow: 5px 5px 5px white;
+    margin: 15vh;
 }
 
 #langSelec h1:hover {
 	padding: 10vh;
-    box-shadow: 10px 10px 10px #145300;
+    box-shadow: 10px 10px 10px white;
 }
 
 #langSelec {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 99vw;
     height: 95vh;
 }
@@ -43,40 +62,75 @@
     HOME PAGE RULES
 */
 
-
-header, header * {
-    background-color: #2bb100;
+.en {
+	font-family: 'Shadows Into Light', cursive;
 }
 
-header h1 {
-    color: #f92135;
+header {
+    background-color: var(--c3);
+    text-align: center;
 }
 
-
-#menu {
-	display: none;
+header *{
+    background-color: transparent;
 }
 
-#openMenu:hover #menu {
-	display: block;
+header > h2 {
+    color: white;
 }
 
-#logo {
-	max-width: 50%;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-nav a {
+header a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
+.side {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.side > header {
+	margin-left: 5vw;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    padding: 2vw;
+    grid-gap: 2vw;
+    height: inherit;
+    box-shadow: 5px 0px 2px var(--c1),-5px 0px 2px var(--c1);
+}
+
+.side h2 {
+	border-top: 5px double white;
+    border-bottom: 5px double white;
+    align-self: center;
+    padding: 5px;
+}
+
+.side > header nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.side > section {
+	margin: 5vw;
+}
+
+.top {
+	
+}
+
+
+#outer-grid > section {
+	border: 5px solid white;
+}
+
+/*
+#outer-grid > section {
+	border: 5px solid white;
+}
+*/
