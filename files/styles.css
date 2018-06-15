@@ -85,14 +85,14 @@ header a {
     font-weight: 900;
 }
 
-header nav a {
-    background-color: var(--p3);
-    padding: 10px;
-    border-radius: 15px;
-    margin: 5px;
-    color: var(--c3);
-    box-shadow: 2px 2px 1px white;
+#outer-grid > section {
+	border: 5px solid var(--c3);
+    border-radius: 50px;
 }
+
+/*
+    SIDEBAR
+*/
 
 .side {
     display: grid;
@@ -112,8 +112,6 @@ header nav a {
 }
 
 .side h2 {
-	border-top: 5px double var(--p4);
-    border-bottom: 5px double var(--p4);
     align-self: center;
     padding: 5px;
 }
@@ -123,6 +121,12 @@ header nav a {
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
+}
+
+.side .devider {
+	height: 2px;
+    width: 50%;
+    background-image: linear-gradient(to left, transparent, var(--p3), transparent);
 }
 
 .side > section {
@@ -136,9 +140,13 @@ header nav a {
     text-align: center;
 }
 
+/*
+    TOPBAR
+*/
+
 .top {
 	display: grid;
-    grid-template-rows: 1fr (4fr,auto); /* TO BE CHECKED... */
+    grid-template-rows: 1fr 4fr;
     width: 100vw;
     min-height: 100vh;
 }
@@ -146,16 +154,15 @@ header nav a {
 .top > header {
     margin-top: 5vw;
     display: grid;
-    grid-template-columns: 5fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: 2vw;
     grid-gap: 2vw;
     width: inherit;
-    box-shadow: 5px 0px 2px var(--c1),-5px 0px 2px var(--c1);
+    box-shadow: 0px 5px 2px var(--c1),0px -5px 2px var(--c1);
 }
 
 .top h2 {
-	border-top: 5px double var(--p4);
-    border-bottom: 5px double var(--p4);
     align-self: center;
     padding: 5px;
     grid-column: 1/-1;
@@ -168,6 +175,12 @@ header nav a {
     justify-content: space-around;
 }
 
+.top .devider {
+	width: 2px;
+    height: 50px;
+    background-image: linear-gradient(to bottom, transparent, var(--p3), transparent);
+}
+
 .top > section {
 	margin: 5vw;
     display: flex;
@@ -177,9 +190,4 @@ header nav a {
     color: white;
     font-weight: bolder;
     text-align: center;
-}
-
-#outer-grid > section {
-	border: 5px solid var(--c3);
-    border-radius: 50px;
 }
