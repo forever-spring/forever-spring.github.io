@@ -3,7 +3,10 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+@import url('https://fonts.googleapis.com/css?family=Scheherazade');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 :root {
     --p1: #9fb9f6;
@@ -22,12 +25,36 @@
     margin: 0px;
 }
 
+html, body {
+    font-size: 20px;
+}
+
+
+.fancyen {
+    font-family: 'Kalam', cursive;
+}
+
+.normalen {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.fancyfa {
+    font-family: 'Amiri', serif;
+}
+
+.normalfa {
+    font-family: 'Scheherazade', serif;
+}
+
 /*
     INDEX FILE RULES
 */
 
+h1 .fancyfa {
+    font-family: 'Reem Kufi', sans-serif;
+}
+
 #langSelec a {
-	font-family: 'Reem Kufi', sans-serif;
     text-decoration: none;
     color: white;
     background-color: rgba(255,255,255,0);
@@ -62,10 +89,6 @@
     HOME PAGE RULES
 */
 
-.en {
-	font-family: 'Shadows Into Light', cursive;
-}
-
 header {
     background-color: var(--c3);
     text-align: center;
@@ -77,6 +100,10 @@ header *{
 
 header > h2 {
     color: var(--p3);
+}
+
+.fancyfa h2 {
+	font-family: 'Reem Kufi', sans-serif;
 }
 
 header a {
@@ -96,19 +123,18 @@ header a {
 
 .side {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     width: 100vw;
     height: 100vh;
 }
 
 .side > header {
-	margin-left: 5vw;
     display: grid;
     grid-template-rows: 1fr 5fr;
     padding: 2vw;
     grid-gap: 2vw;
     height: inherit;
-    box-shadow: 5px 0px 2px var(--c1),-5px 0px 2px var(--c1);
+    box-shadow: 5px 0px 2px var(--c1), -5px 0px 2px var(--c1);
 }
 
 .side h2 {
@@ -146,20 +172,19 @@ header a {
 
 .top {
 	display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     width: 100vw;
     min-height: 100vh;
 }
 
 .top > header {
-    margin-top: 5vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 2vw;
     grid-gap: 2vw;
     width: inherit;
-    box-shadow: 0px 5px 2px var(--c1),0px -5px 2px var(--c1);
+    box-shadow: 0px 5px 2px var(--c1);
 }
 
 .top h2 {
