@@ -115,6 +115,7 @@ header a {
 #outer-grid > section {
 	border: 5px solid var(--c3);
     border-radius: 50px;
+    overflow: auto;
 }
 
 /*
@@ -159,11 +160,12 @@ header a {
 	margin: 5vw;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     color: white;
     font-weight: bolder;
     text-align: center;
+    
 }
 
 /*
@@ -210,9 +212,32 @@ header a {
 	margin: 5vw;
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     color: white;
     font-weight: bolder;
     text-align: center;
 }
+
+/*
+    SKILLS
+*/
+
+.skillGroup {
+	background-color: rgba(255,255,255,0.4);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 2px 2px 1px white;
+}
+
+.skillGroup * {
+	background-color: transparent;
+    color: var(--c3);
+}
+
+.skill {
+	display: none;
+}
+
+/* WORK ON REAPPEARING SKILLS */
