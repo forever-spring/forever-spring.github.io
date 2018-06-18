@@ -9,3 +9,12 @@ function layoutPlanner() {
         target.addClass("top");
     }
 }
+
+function styleLink() {
+    var elems=$("nav a");
+    $.each(elems,(key, val)=>{
+        if(window.location.href === val.href){
+            val.className="selected"
+        }
+    });
+}
