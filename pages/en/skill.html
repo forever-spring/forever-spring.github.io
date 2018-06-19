@@ -4,12 +4,12 @@
 	<head>
 		<meta charset="utf-8">
         <link rel="stylesheet" href="../../files/styles.css">
-        <script type="text/javascript" src="../../files/jquery.js"></script>
+        <script type="text/javascript" src="../../files/jquery-3.3.1.slim.js"></script>
         <script type="text/javascript" src="../../files/scripts.js"></script>
 		<title>Bahar Paydar</title>
 	</head>
     
-	<body onload="layoutPlanner(); styleLink();">
+	<body onload="init();">
 		<div id="outer-grid">
             <header class="fancyen">
                 <h2><a href="ind.html" title="HomePage">BAHAR PAYDAR</a></h2>
@@ -27,44 +27,59 @@
             </header>
             <section class="normalen skillWrapper">
                 <div class="skillGroup">
-                    <h3>Soft Skills</h3>
-                    <p class="skill">Team Work</p>
-                    <p class="skill">Organizing &amp; Coordinating Events</p>
-                    <p class="skill">Punctuality</p>
+                    <h3 onclick="showSkills();">Soft Skills</h3>
+                    <div class="skills">
+                        <button>&cross; Close</button>
+                        <p class="skill">Team Work</p>
+                        <p class="skill">Organizing &amp; Coordinating Events</p>
+                        <p class="skill">Punctuality</p>
+                    </div>
                 </div>
                 <div class="skillGroup">
-                    <h3>Programming Skills</h3>
-                    <p class="skill">Bash</p>
-                    <p class="skill">C</p>
-                    <p class="skill">C++</p>
-                    <p class="skill">Java</p>
-                    <p class="skill">Python</p>
-                    <p class="skill">HTML</p>
-                    <p class="skill">CSS</p>
-                    <p class="skill">JavaScript</p>
-                    <p class="skill">JQuery</p>
-                    <p class="skill">React</p>
-                    <p class="skill">Node.js</p>
+                    <h3 onclick="showSkills();">Programming Skills</h3>
+                    <div class="skills">
+                        <button>&cross; Close</button>
+                        <p class="skill">Bash</p>
+                        <p class="skill">C</p>
+                        <p class="skill">C++</p>
+                        <p class="skill">Java</p>
+                        <p class="skill">Python</p>
+                        <p class="skill">HTML</p>
+                        <p class="skill">CSS</p>
+                        <p class="skill">JavaScript</p>
+                        <p class="skill">JQuery</p>
+                        <p class="skill">React</p>
+                        <p class="skill">Node.js</p>
+                    </div>
                 </div>
                 <div class="skillGroup">
-                    <h3>Software &amp; Computer Skills</h3>
-                    <p class="skill">LaTeX</p>
-                    <p class="skill">PhotoShop</p>
-                    <p class="skill">GIMP</p>
-                    <p class="skill">Linux</p>
-                    <p class="skill">Touch Typing</p>
-                    <p class="skill">ICDL</p>
+                    <h3 onclick="showSkills();">Software &amp; Computer Skills</h3>
+                    <div class="skills">
+                        <button>&cross; Close</button>
+                        <p class="skill">LaTeX</p>
+                        <p class="skill">PhotoShop</p>
+                        <p class="skill">GIMP</p>
+                        <p class="skill">Linux</p>
+                        <p class="skill">Touch Typing</p>
+                        <p class="skill">ICDL</p>
+                    </div>
                 </div>
                 <div class="skillGroup">
-                    <h3>Translation Skills</h3>
-                    <p class="skill">Computer and Mathematics</p>
-                    <p class="skill">English to Farsi</p>
+                    <h3 onclick="showSkills();">Translation Skills</h3>
+                    <div class="skills">
+                        <button>&cross; Close</button>
+                        <p class="skill">Computer and Mathematics</p>
+                        <p class="skill">English to Farsi</p>
+                    </div>
                 </div>
                 <div class="skillGroup">
-                    <h3>Languages</h3>
-                    <p class="skill">Farsi - native</p>
-                    <p class="skill">English - fluent</p>
-                    <p class="skill">French - introductory</p>
+                    <h3 onclick="showSkills();">Languages</h3>
+                    <div class="skills">
+                        <button>&cross; Close</button>
+                        <p class="skill">Farsi - native</p>
+                        <p class="skill">English - fluent</p>
+                        <p class="skill">French - introductory</p>
+                    </div>
                 </div>
             </section>
         </div>

@@ -228,7 +228,7 @@ header a {
 */
 
 .skillGroup {
-	background-color: rgba(255,255,255,0.4);
+	background-color: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 10px;
     margin: 30px;
@@ -240,8 +240,15 @@ header a {
     color: var(--c3);
 }
 
-.skill {
+.skillGroup > h3 {
+	cursor: pointer;
+}
+
+.skills {
 	display: none;
 }
 
-/* WORK ON REAPPEARING SKILLS */
+.skills.show {
+	display: block;
+    /* update display */
+}
