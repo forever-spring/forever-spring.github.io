@@ -237,7 +237,7 @@ header a {
 
 .skillGroup * {
 	background-color: transparent;
-    color: var(--c3);
+    color: white;
 }
 
 .skillGroup > h3 {
@@ -249,6 +249,36 @@ header a {
 }
 
 .skills.show {
-	display: block;
-    /* update display */
+	display: flex;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50px;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.skills.show button {
+	border: none;
+    text-align: justify;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: var(--c3);
+    font-weight: bold;
+}
+
+.skills.show .skillsList {
+	display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: var(--p4);
+}
+
+.skills.show .skillsList p {
+    color: white;
+    width: 300px;
+    padding: 10px;
 }

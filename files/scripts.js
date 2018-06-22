@@ -19,6 +19,15 @@ function styleLink() {
     });
 }
 
+function setSizePos(skills) {
+    skillWrapper=skills.parents(".skillWrapper");
+    pos=skillWrapper.position();
+    skills.css("width",skillWrapper.css("width"));
+    skills.css("height",skillWrapper.css("height"));
+    skills.css("top",pos.top+(0.05 * window.innerWidth));
+    skills.css("left",pos.left+(0.05 * window.innerWidth));
+}
+
 function hideSkills(e) {
     $(e.target).parent().removeClass("show");
 }
@@ -26,6 +35,7 @@ function hideSkills(e) {
 function showSkills(e) {
     var skills=$(e.target).next();
     skills.addClass("show");
+    setSizePos(skills);
     skills.children("button").click(hideSkills);
 }
 
