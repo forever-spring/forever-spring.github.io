@@ -3,9 +3,11 @@ function layoutPlanner() {
     var w=window.innerWidth;
     var target=$("#outer-grid");
     if(h<w){
+        target.removeClass("top");
         target.addClass("side");
     }
     else{
+        target.removeClass("side");
         target.addClass("top");
     }
 }
@@ -19,7 +21,8 @@ function styleLink() {
     });
 }
 
-function setSizePos(skills) {
+function setSizePos() {
+    skills=$(".skills");
     skillWrapper=skills.parents(".skillWrapper");
     pos=skillWrapper.position();
     skills.css("width",skillWrapper.css("width"));
@@ -35,7 +38,7 @@ function hideSkills(e) {
 function showSkills(e) {
     var skills=$(e.target).next();
     skills.addClass("show");
-    setSizePos(skills);
+    setSizePos();
     skills.children("button").click(hideSkills);
 }
 
