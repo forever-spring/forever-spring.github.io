@@ -113,8 +113,6 @@ header a {
 }
 
 #outer-grid > section {
-	border: 5px solid var(--c3);
-    border-radius: 50px;
     overflow: auto;
 }
 
@@ -229,10 +227,10 @@ header a {
 
 .skillGroup {
 	background-color: rgba(255,255,255,0.1);
+    box-shadow: 2px 2px 1px white;
     padding: 20px;
     border-radius: 10px;
     margin: 30px;
-    box-shadow: 2px 2px 1px white;
 }
 
 .skillGroup * {
@@ -252,10 +250,11 @@ header a {
 	display: flex;
     position: absolute;
     background-color: rgba(0,0,0,0.4);
-    border-radius: 50px;
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
+    height: 100vh;
+    width: 83vw;
 }
 
 .skills.show button {
@@ -281,4 +280,57 @@ header a {
     color: white;
     width: 300px;
     padding: 10px;
+}
+
+/*
+    EDUCATION
+*/
+
+.eduItem {
+	background-color: rgba(255,255,255,0.6); /* CORRECT */
+    margin: 10px;
+    display: grid;
+    grid-template-areas: 
+        "College College"
+        "degSub gradDate"
+        "ave ave"
+        ;
+    grid-gap: 10px;
+    align-items: center;
+	background-color: rgba(255,255,255,0.1);
+    box-shadow: 2px 2px 1px white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.College {
+	grid-area: College;
+}
+.degSub {
+	grid-area: degSub;
+}
+.gradDate {
+	grid-area: gradDate;
+}
+.ave {
+	grid-area: ave;
+}
+
+.eduItem * {
+	background-color: transparent;
+    margin: 10px;
+}
+
+.degSub.fa {
+	text-align: right;
+}
+.degSub.en {
+	text-align: left;
+}
+.gradDate.en {
+	text-align: right;
+}
+.gradDate.fa {
+	text-align: left;
 }

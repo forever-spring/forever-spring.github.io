@@ -25,10 +25,8 @@ function setSizePos() {
     skills=$(".skills");
     skillWrapper=skills.parents(".skillWrapper");
     pos=skillWrapper.position();
-    skills.css("width",skillWrapper.css("width"));
-    skills.css("height",skillWrapper.css("height"));
-    skills.css("top",pos.top+(0.05 * window.innerWidth));
-    skills.css("left",pos.left+(0.05 * window.innerWidth));
+    skills.css("top",pos.top);
+    skills.css("left",pos.left+5);
 }
 
 function hideSkills(e) {
@@ -42,11 +40,28 @@ function showSkills(e) {
     skills.children("button").click(hideSkills);
 }
 
+function eduWset(itms){
+    var width=itms.parent().css("width");
+    width=width.slice(0,-2);
+    console.log(Number(width) < 500);
+    if(Number(width) < 500){
+        itms.css("width",Number(width)-2);
+    }
+    else{
+        console.log("wrong branch");
+        itms.css("width", 500);
+    }
+}
+
 function init(){
     layoutPlanner();
     styleLink();
     if(window.location.href.indexOf("skill.html") !== -1){
         var openers=$(".skillGroup > h3");
         openers.click(showSkills);
+    }
+    if(window.location.href.indexOf("edu.html") !== -1){
+        var itms=$(".eduItem");
+        eduWset(itms);
     }
 }
