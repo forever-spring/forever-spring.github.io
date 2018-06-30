@@ -117,7 +117,10 @@ header a {
 }
 
 .selected {
-    text-shadow: 2px 0px 2px white,0px 2px 2px white, -2px 0px 2px white, 0px -2px 2px white;
+    background-image: radial-gradient(var(--c1),transparent);
+    border-radius: 100px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px black;
 }
 
 /*

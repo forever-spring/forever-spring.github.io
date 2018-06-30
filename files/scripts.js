@@ -43,12 +43,10 @@ function showSkills(e) {
 function eduWset(itms){
     var width=itms.parent().css("width");
     width=width.slice(0,-2);
-    console.log(Number(width) < 500);
     if(Number(width) < 500){
         itms.css("width",Number(width)-2);
     }
     else{
-        console.log("wrong branch");
         itms.css("width", 500);
     }
 }
