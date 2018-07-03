@@ -337,3 +337,28 @@ header a {
 .gradDate.fa {
 	text-align: left;
 }
+
+/* 
+    CERTIFICATES
+*/
+
+.side #certFrame {
+	display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.top #certFrame {
+/*	COMPLETE THIS  */
+}
+
+#certDisplay {
+	border: 1px solid black;
+    height: 100%;
+}
+
+#certFrame img {
+	width: 100%;
+    filter: blur(1px);
+}
