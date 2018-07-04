@@ -24,9 +24,20 @@ function styleLink() {
 function setSizePos() {
     skills=$(".skills");
     skillWrapper=skills.parents(".skillWrapper");
+    frame=skillWrapper.parent();
     pos=skillWrapper.position();
-    skills.css("top",pos.top);
-    skills.css("left",pos.left+5);
+    if(frame.hasClass("side")){
+        skills.css("top",pos.top);
+        skills.css("left",pos.left+5);
+        skills.css("height",window.innerHeight);
+        skills.css("width",window.innerWidth * 0.83);
+    }
+    if(frame.hasClass("top")){
+        skills.css("top",pos.top+5);
+        skills.css("left",pos.left);
+        skills.css("height",frame.css("height").slice(0,-2)-205);
+        skills.css("width",window.innerWidth);
+    }
 }
 
 function hideSkills(e) {

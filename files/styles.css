@@ -179,7 +179,7 @@ header a {
 
 .top {
 	display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 200px 1fr;
     width: 100vw;
     min-height: 100vh;
 }
@@ -256,8 +256,6 @@ header a {
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
-    height: 100vh;
-    width: 83vw;
 }
 
 .skills.show button {
@@ -350,11 +348,26 @@ header a {
 }
 
 .top #certFrame {
-/*	COMPLETE THIS  */
+    display: grid;
+    grid-template-areas: 
+        "display    display     display"
+        "prev       empty       next";
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 100px 1fr 100px;
+    grid-gap: 10px;
+}
+#prev {
+	grid-area: prev;
+}
+#next {
+	grid-area: next;
+}
+#certDisplay {
+	grid-area: display;
 }
 
 #certDisplay {
-	border: 1px solid black;
+    background-color: rgba(0,0,0,0.2);
     height: 100%;
 }
 
