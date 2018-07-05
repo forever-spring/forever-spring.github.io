@@ -335,17 +335,17 @@ header a {
 }
 
 /* 
-    CERTIFICATES
+    WORKS
 */
 
-.side #crsFrame {
+.side #wrkFrame {
 	display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-gap: 10px;
     align-items: center;
 }
 
-.top #crsFrame {
+.top #wrkFrame {
     display: grid;
     grid-template-areas: 
         "display    display     display"
@@ -360,16 +360,23 @@ header a {
 .top #next {
 	grid-area: next;
 }
-.top #crsDisplay {
+.top #wrkDisplay {
 	grid-area: display;
 }
 
-#crsDisplay {
-    background-color: rgba(0,0,0,0.2);
+#wrkDisplay {
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3px;
+    align-items: center;
 }
 
-#crsFrame img {
+#wrkFrame > img {
 	width: 100%;
     filter: blur(1px);
+}
+
+#wrkDisplay > .show > img {
+	width: 100%;
+    border: 5px groove white;
 }
