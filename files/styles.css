@@ -117,10 +117,8 @@ header a {
 }
 
 .selected {
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 2px 2px white;
+    text-shadow: -2px 0 var(--p3), 0 2px var(--p3), 2px 0 var(--p3), 0 -2px var(--p3);
+    color: white;
 }
 
 /*
@@ -340,14 +338,14 @@ header a {
     CERTIFICATES
 */
 
-.side #certFrame {
+.side #crsFrame {
 	display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-gap: 10px;
     align-items: center;
 }
 
-.top #certFrame {
+.top #crsFrame {
     display: grid;
     grid-template-areas: 
         "display    display     display"
@@ -356,22 +354,22 @@ header a {
     grid-template-columns: 100px 1fr 100px;
     grid-gap: 10px;
 }
-#prev {
+.top #prev {
 	grid-area: prev;
 }
-#next {
+.top #next {
 	grid-area: next;
 }
-#certDisplay {
+.top #crsDisplay {
 	grid-area: display;
 }
 
-#certDisplay {
+#crsDisplay {
     background-color: rgba(0,0,0,0.2);
     height: 100%;
 }
 
-#certFrame img {
+#crsFrame img {
 	width: 100%;
     filter: blur(1px);
 }
