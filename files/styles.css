@@ -338,6 +338,14 @@ header a {
     WORKS
 */
 
+.wrkItem {
+	display: none;
+}
+
+.wrkItem.show {
+	display: block;
+}
+
 .side #wrkFrame {
 	display: grid;
     grid-template-columns: 1fr 5fr 1fr;
@@ -374,6 +382,7 @@ header a {
 #wrkFrame > img {
 	width: 100%;
     filter: blur(1px);
+    padding: 5px;
 }
 
 #wrkDisplay > .show > img {

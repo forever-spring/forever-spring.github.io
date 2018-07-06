@@ -62,6 +62,38 @@ function eduWset(itms){
     }
 }
 
+function goBack(){
+    var showing=$(".show");
+    var toShow=showing.prev();
+    showing.removeClass("show");
+    toShow.addClass("show");
+    slider();
+}
+function goForward(){
+    var showing=$(".show");
+    var toShow=showing.next();
+    showing.removeClass("show");
+    toShow.addClass("show");
+    slider();
+}
+function slider(){
+    var prev=$("#prev");
+    var next=$("#next");
+    var wrks=$(".wrkItem");
+    prev.click(goBack);
+    next.click(goForward);
+    if(wrks.index(".show")==0){
+        prev.css("box-shadow","-2px -2px 1px black");
+        prev.css("background-color","rgba(0,0,0,0.2)");
+        prev.off( "click" );
+    }
+    if(wrks.index(".show")==wrks.length-1){
+        next.css("box-shadow","-2px -2px 1px black");
+        next.css("background-color","rgba(0,0,0,0.2)");
+        next.off( "click" );
+    }
+}
+
 function init(){
     layoutPlanner();
     styleLink();
@@ -72,5 +104,8 @@ function init(){
     if(window.location.href.indexOf("edu.html") !== -1){
         var itms=$(".eduItem");
         eduWset(itms);
+    }
+    if(window.location.href.indexOf("work.html") !== -1){
+        slider();
     }
 }
