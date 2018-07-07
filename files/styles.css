@@ -117,8 +117,7 @@ header a {
 }
 
 .selected {
-    text-shadow: -2px 0 var(--p3), 0 2px var(--p3), 2px 0 var(--p3), 0 -2px var(--p3);
-    color: white;
+    filter: drop-shadow(1px 1px black);
 }
 
 /*
@@ -383,6 +382,11 @@ header a {
 	width: 100%;
     filter: blur(1px);
     padding: 5px;
+}
+
+#wrkFrame > img.disabled {
+	box-shadow: -2px -2px 1px black; 
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #wrkDisplay > .show > img {

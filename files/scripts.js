@@ -82,15 +82,33 @@ function slider(){
     var wrks=$(".wrkItem");
     prev.click(goBack);
     next.click(goForward);
-    if(wrks.index(".show")==0){
-        prev.css("box-shadow","-2px -2px 1px black");
-        prev.css("background-color","rgba(0,0,0,0.2)");
-        prev.off( "click" );
+    console.log(wrks);
+    console.log(wrks.index(".show"));
+    /*console.log(wrks.length);
+    console.log(wrks.index(".show"));*/
+    if(wrks.index(".show")==0 && wrks.index(".show")==wrks.length-1){
+        //console.log("only item");
+        prev.addClass("disabled");
+        next.addClass("disabled");
+        prev.off("click");
+        next.off("click");
     }
-    if(wrks.index(".show")==wrks.length-1){
-        next.css("box-shadow","-2px -2px 1px black");
-        next.css("background-color","rgba(0,0,0,0.2)");
-        next.off( "click" );
+    else if(wrks.index(".show")==0){
+        //console.log("first item");
+        prev.addClass("disabled");
+        next.removeClass("disabled");
+        prev.off("click");
+    }
+    else if(wrks.index(".show")==wrks.length-1){
+        //console.log("last item");
+        next.addClass("disabled");
+        prev.removeClass("disabled");
+        next.off("click");
+    }
+    else{
+        //console.log("middle items");
+        prev.removeClass("disabled");
+        next.removeClass("disabled");
     }
 }
 
