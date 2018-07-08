@@ -48,6 +48,7 @@ function showSkills(e) {
     var skills=$(e.target).next();
     skills.addClass("show");
     setSizePos();
+    skills.children("button").off("click");
     skills.children("button").click(hideSkills);
 }
 
@@ -62,44 +63,57 @@ function eduWset(itms){
     }
 }
 
+function findInd(jqobj,select){
+    let res;
+    jqobj.each((ind,elem)=>{
+        if($(elem).hasClass(select)){
+            res=ind;
+        }
+    });
+    return res;
+}
 function goBack(){
-    var showing=$(".show");
-    var toShow=showing.prev();
-    showing.removeClass("show");
-    toShow.addClass("show");
+    var wrks=$(".wrkItem");
+    var showing=findInd(wrks,"show");
+    if(showing>0){
+        $(wrks[showing]).removeClass("show");
+        $(wrks[showing-1]).addClass("show");
+    }
     slider();
 }
 function goForward(){
-    var showing=$(".show");
-    var toShow=showing.next();
-    showing.removeClass("show");
-    toShow.addClass("show");
+    var wrks=$(".wrkItem");
+    var showing=findInd(wrks,"show");
+    if(showing<wrks.length-1){
+        $(wrks[showing]).removeClass("show");
+        $(wrks[showing+1]).addClass("show");
+    }
     slider();
 }
 function slider(){
     var prev=$("#prev");
     var next=$("#next");
     var wrks=$(".wrkItem");
+    var showInd=findInd(wrks,"show");
+    prev.off("click");
+    next.off("click");
     prev.click(goBack);
     next.click(goForward);
-    console.log(wrks);
-    console.log(wrks.index(".show"));
-    /*console.log(wrks.length);
-    console.log(wrks.index(".show"));*/
-    if(wrks.index(".show")==0 && wrks.index(".show")==wrks.length-1){
+    console.log(showInd);
+    if(showInd==0 && showInd==wrks.length-1){
         //console.log("only item");
         prev.addClass("disabled");
         next.addClass("disabled");
         prev.off("click");
         next.off("click");
     }
-    else if(wrks.index(".show")==0){
+    else if(showInd==0){
         //console.log("first item");
         prev.addClass("disabled");
         next.removeClass("disabled");
         prev.off("click");
     }
-    else if(wrks.index(".show")==wrks.length-1){
+    else if(showInd==wrks.length-1){
         //console.log("last item");
         next.addClass("disabled");
         prev.removeClass("disabled");
