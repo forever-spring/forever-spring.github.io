@@ -99,28 +99,23 @@ function slider(){
     next.off("click");
     prev.click(goBack);
     next.click(goForward);
-    console.log(showInd);
     if(showInd==0 && showInd==wrks.length-1){
-        //console.log("only item");
         prev.addClass("disabled");
         next.addClass("disabled");
         prev.off("click");
         next.off("click");
     }
     else if(showInd==0){
-        //console.log("first item");
         prev.addClass("disabled");
         next.removeClass("disabled");
         prev.off("click");
     }
     else if(showInd==wrks.length-1){
-        //console.log("last item");
         next.addClass("disabled");
         prev.removeClass("disabled");
         next.off("click");
     }
     else{
-        //console.log("middle items");
         prev.removeClass("disabled");
         next.removeClass("disabled");
     }

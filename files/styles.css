@@ -57,23 +57,23 @@ h1 .fancyfa {
 #langSelec a {
     text-decoration: none;
     color: white;
-    background-color: rgba(255,255,255,0);
+    background-color: transparent;
 }
 
 #langSelec h1 {
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.1);
     border-radius: 20px;
 }
 
 #langSelec h1 {
     padding: 5vh;
-	box-shadow: 5px 5px 5px white;
+	box-shadow: 0px 5px 5px white;
     margin: 15vh;
 }
 
 #langSelec h1:hover {
 	padding: 10vh;
-    box-shadow: 10px 10px 10px white;
+    box-shadow: 0px 10px 10px white,0px -10px 10px white,10px 0px 10px white,-10px 0px 10px white;
 }
 
 #langSelec {
@@ -110,6 +110,7 @@ header a {
     color: var(--p3);
     text-decoration: none;
     font-weight: 900;
+    text-transform: uppercase;
 }
 
 #outer-grid > section {
@@ -227,7 +228,7 @@ header a {
 
 .skillGroup {
 	background-color: rgba(255,255,255,0.1);
-    box-shadow: 2px 2px 1px white;
+    box-shadow: 0px 2px 1px white;
     padding: 20px;
     border-radius: 10px;
     margin: 30px;
@@ -259,10 +260,11 @@ header a {
 	border: none;
     text-align: justify;
     padding-left: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     cursor: pointer;
     color: var(--c3);
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .skills.show .skillsList {
@@ -272,6 +274,7 @@ header a {
     justify-content: center;
     border-radius: 25px;
     background-color: var(--p4);
+    box-shadow: 0px 0px 10px white;
 }
 
 .skills.show .skillsList p {
@@ -296,7 +299,7 @@ header a {
     grid-gap: 10px;
     align-items: center;
 	background-color: rgba(255,255,255,0.1);
-    box-shadow: 2px 2px 1px white;
+    box-shadow: 0px 2px 1px white;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -390,6 +393,6 @@ header a {
 }
 
 #wrkDisplay > .show > img {
-	width: 100%;
-    border: 5px groove white;
+	width: 95%;
+    box-shadow: 0px 0px 10px black;
 }
