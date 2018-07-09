@@ -63,6 +63,16 @@ function eduWset(itms){
     }
 }
 
+function createProgress(){
+    var wrks=$(".wrkItem");
+    var progress=$("#progress");
+    var nwrks=wrks.length;
+    progress.html("");
+    for(var i=0;i<nwrks;i++){
+        progress.append(`<p class="progressNode" id="Node${i}"></p>`);
+    }
+    $("#Node0").addClass("highlighted");
+}
 function findInd(jqobj,select){
     let res;
     jqobj.each((ind,elem)=>{
@@ -78,6 +88,8 @@ function goBack(){
     if(showing>0){
         $(wrks[showing]).removeClass("show");
         $(wrks[showing-1]).addClass("show");
+        $("#Node"+`${showing}`).removeClass("highlighted");
+        $("#Node"+`${showing-1}`).addClass("highlighted");
     }
     slider();
 }
@@ -87,6 +99,8 @@ function goForward(){
     if(showing<wrks.length-1){
         $(wrks[showing]).removeClass("show");
         $(wrks[showing+1]).addClass("show");
+        $("#Node"+`${showing}`).removeClass("highlighted");
+        $("#Node"+`${showing+1}`).addClass("highlighted");
     }
     slider();
 }
@@ -133,6 +147,7 @@ function init(){
         eduWset(itms);
     }
     if(window.location.href.indexOf("work.html") !== -1){
+        createProgress();
         slider();
     }
 }
