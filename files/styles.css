@@ -30,19 +30,19 @@ html, body {
 }
 
 
-.fancyen {
+.fancyen, .fancyen * {
     font-family: 'Kalam', cursive;
 }
 
-.normalen {
+.normalen, .normalen * {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.fancyfa {
+.fancyfa, .fancyfa * {
     font-family: 'Amiri', serif;
 }
 
-.normalfa {
+.normalfa, .normalfa * {
     font-family: 'Scheherazade', serif;
 }
 
@@ -414,4 +414,12 @@ header a {
 
 .progressNode.highlighted {
 	background-color: var(--c3);
+}
+
+/*
+    CONTACTS-FA
+*/
+
+#telegram img {
+	vertical-align: middle;
 }
