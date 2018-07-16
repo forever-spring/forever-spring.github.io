@@ -74,7 +74,7 @@ h1 .fancyfa {
 
 #langSelec h1:hover {
 	padding: 10vh;
-    
+
 }
 
 #langSelec {
@@ -169,7 +169,7 @@ header a {
     color: white;
     font-weight: bolder;
     text-align: center;
-    
+
 }
 
 /*
@@ -290,7 +290,7 @@ header a {
 .eduItem {
     margin: 10px;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "College College"
         "degSub gradDate"
         "ave ave"
@@ -334,7 +334,7 @@ header a {
 	text-align: left;
 }
 
-/* 
+/*
     WORKS
 */
 
@@ -355,7 +355,7 @@ header a {
 
 .top #wrkFrame {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "display    display     display"
         "prev       empty       next";
     grid-template-rows: 3fr 1fr;
@@ -414,6 +414,7 @@ header a {
 
 .progressNode.highlighted {
 	background-color: var(--c3);
+  height: 5px;
 }
 
 /*
