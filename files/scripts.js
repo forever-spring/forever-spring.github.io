@@ -28,7 +28,12 @@ function setSizePos() {
     pos=skillWrapper.position();
     if(frame.hasClass("side")){
         skills.css("top",pos.top);
-        skills.css("left",pos.left+5);
+        if(skillWrapper.hasClass("normalfa")){
+          skills.css("left",pos.left);
+        }
+        else {
+          skills.css("left",pos.left+5);
+        }
         skills.css("height",window.innerHeight);
         skills.css("width",window.innerWidth * 0.83);
     }
