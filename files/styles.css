@@ -1,420 +1,140 @@
 /*
-    GENERAL RULES
+	DEFINITIONS
 */
-
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
-@import url('https://fonts.googleapis.com/css?family=Amiri');
-@import url('https://fonts.googleapis.com/css?family=Scheherazade');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-@import url('https://fonts.googleapis.com/css?family=Kalam');
-
 :root {
-    --p1: #9fb9f6;
-    --p2: #6490f3;
-    --p3: #2e6af3;
-    --p4: #034bf1;
-    --c1: #ffdd9a;
-    --c2: #ffc758;
-    --c3: #ffb219;
-    --c4: #ffaa00;
-    --blue3: rgba(4,94,163,0.3);
-    --blue10: rgba(4,94,163,1);
+	--dark: rgba(38,70,83,1);
+	--shine: rgba(255,113,91,1);
+}
+@font-face {
+	font-family: cordoba;
+	src: url("fonts/Far_Cordoba.woff");
+}
+@font-face {
+	font-family: shabnam;
+	src: url("fonts/Shabnam.woff");
+}
+@font-face {
+	font-family: raleway;
+	src: url("fonts/Raleway-Regular.ttf");
+}
+@font-face {
+	font-family: cks;
+	src: url("fonts/ConcettaKalvaniSignature.ttf");
 }
 
+/*
+	FONT RULES
+*/
+.decorfa, .decorfa * {
+	font-family: cordoba;
+}
+.regfa, .regfa * {
+	font-family: shabnam;
+}
+.decoren, .decoren * {
+	font-family: cks;
+}
+.regen, .regen * {
+	font-family: raleway;
+}
+body {
+	font-size: 14px;
+}
+
+/*
+	GENERAL RULES
+*/
+a {
+	text-decoration: none;
+}
 * {
-    background-color: white;
-    box-sizing: border-box;
-    margin: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	color: var(--dark);
+	font-size: 1em;
 }
-
-html, body {
-    font-size: 20px;
-}
-
-
-.fancyen, .fancyen * {
-    font-family: 'Kalam', cursive;
-}
-
-.normalen, .normalen * {
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-
-.fancyfa, .fancyfa * {
-    font-family: 'Amiri', serif;
-}
-
-.normalfa, .normalfa * {
-    font-family: 'Scheherazade', serif;
+.resume {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
 }
 
 /*
-    INDEX FILE RULES
+	LANGSELECT RULES
 */
-
-#langSelec a {
-    text-decoration: none;
-    color: var(--blue10);
-    background-color: transparent;
-    padding: 5vh;
-    box-shadow: 0px 0px 5px black;
-}
-
-#langSelec h1 {
-    padding: 5vh;
-    margin: 15vh;
-}
-
-#langSelec a:hover {
-    box-shadow: 0px 0px 10px black;
-}
-
 #langSelec {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    width: 99vw;
-    height: 95vh;
-}
-
-/*
-    HOME PAGE RULES
-*/
-
-header {
-    background-color: var(--blue10);
-    text-align: center;
-}
-
-header *{
-    background-color: transparent;
-}
-
-header > h2 {
-    color: white;
-    text-align: center;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-shadow: 2px 2px black;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#outer-grid > section {
-    overflow: auto;
-}
-
-.selected {
-    /* box-shadow: 0px 0px 2px white; */
-    box-shadow: 2px 2px 2px white;
-    border: 1px solid white;
-}
-
-/*
-    SIDEBAR
-*/
-
-.side {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    width: 100vw;
-    height: 100vh;
-}
-
-.side > header {
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    padding: 2vw;
-    grid-gap: 2vw;
-    height: inherit;
-    box-shadow: 5px 0px 5px black;
-}
-
-.side h2 {
-    align-self: center;
-    padding: 5px;
-}
-
-.side > header nav {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.side .devider {
-	height: 2px;
-    width: 50%;
-    background-image: linear-gradient(to left, transparent, black, transparent);
-}
-
-.side > section {
-	margin: 5vw;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    justify-content: center;
-    color: var(--blue10);
-    font-weight: bolder;
-    text-align: center;
-
-}
-
-/*
-    TOPBAR
-*/
-
-.top {
-	display: grid;
-    grid-template-rows: 200px 1fr;
-    width: 100vw;
-    min-height: 100vh;
-}
-
-.top > header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 2vw;
-    grid-gap: 2vw;
-    width: inherit;
-    box-shadow: 0px 5px 5px black;
-}
-
-.top h2 {
-    align-self: center;
-    padding: 5px;
-    grid-column: 1/-1;
-}
-
-.top > header nav {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.top .devider {
-	width: 2px;
-    height: 50px;
-    background-image: linear-gradient(to bottom, transparent, black, transparent);
-}
-
-.top > section {
-	margin: 5vw;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    justify-content: center;
-    color: var(--blue10);
-    font-weight: bolder;
-    text-align: center;
-}
-
-/*
-    SKILLS
-*/
-
-.skillGroup {
-    box-shadow: 0px 0px 5px var(--blue10);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 30px;
-}
-
-.skillGroup * {
-	background-color: transparent;
-    color: var(--blue10);
-}
-
-.skillGroup > h3 {
-	cursor: pointer;
-}
-
-.skills {
-	display: none;
-}
-
-.skills.show {
 	display: flex;
-    position: absolute;
-    background-color: var(--blue3);
-    flex-flow: column wrap;
-    align-content: center;
-    justify-content: center;
-}
-
-.skills.show button {
-	border: none;
-    text-align: justify;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.skills.show .skillsList {
-	display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    background-color: white;
-    box-shadow: 0px 0px 10px var(--blue10);
-}
-
-.skills.show .skillsList p {
-    color: var(--blue10);
-    width: 300px;
-    padding: 10px;
-}
-
-/*
-    EDUCATION
-*/
-
-.eduItem {
-    margin: 10px;
-    display: grid;
-    grid-template-areas:
-        "College College"
-        "degSub gradDate"
-        "ave ave"
-        ;
-    grid-gap: 10px;
-    align-items: center;
-    box-shadow: 0px 0px 5px var(--blue10);
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.College {
-	grid-area: College;
-}
-.degSub {
-	grid-area: degSub;
-}
-.gradDate {
-	grid-area: gradDate;
-}
-.ave {
-	grid-area: ave;
-}
-
-.eduItem * {
-	background-color: transparent;
-    margin: 10px;
-}
-
-.degSub.fa {
-	text-align: right;
-}
-.degSub.en {
-	text-align: left;
-}
-.gradDate.en {
-	text-align: right;
-}
-.gradDate.fa {
-	text-align: left;
-}
-
-/*
-    WORKS
-*/
-
-.wrkItem {
-	display: none;
-}
-
-.wrkItem.show {
-	display: block;
-}
-
-.side #wrkFrame {
-	display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-gap: 10px;
-    align-items: center;
-}
-
-.top #wrkFrame {
-    display: grid;
-    grid-template-areas:
-        "display    display     display"
-        "prev       empty       next";
-    grid-template-rows: 3fr 1fr;
-    grid-template-columns: 100px 1fr 100px;
-    grid-gap: 10px;
-}
-.top #prev {
-	grid-area: prev;
-}
-.top #next {
-	grid-area: next;
-}
-.top #wrkDisplay {
-	grid-area: display;
-}
-
-#wrkDisplay {
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 3px;
-    align-items:center;
-    align-content: center;
-}
-
-#wrkFrame > img {
+	flex-flow: row wrap;
 	width: 100%;
-    filter: blur(1px);
-    padding: 5px;
-    cursor: pointer;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
 }
-
-#wrkFrame > img.disabled {
-    filter: blur(5px);
-    cursor: not-allowed;
+#langSelec a {
+	padding: 40px;
+	margin: 40px;
+	display: block;
+	font-size: 2em;
+	border-radius: 10px;
 }
-
-#wrkDisplay > .show > img {
-	width: 95%;
-    box-shadow: 0px 0px 10px var(--blue10);
-}
-
-#progress {
-	display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(5px,1fr));
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.progressNode {
-    box-shadow: 0px 0px 5px black;
-    height: 2px;
-    margin: 5px;
-    border-radius: 50px;
-}
-
-.progressNode.highlighted {
-	background-color: var(--blue10);
-  height: 5px;
+#langSelec a:hover {
+	box-shadow: 0px 0px 10px var(--shine);
 }
 
 /*
-    CONTACTS
+	BANNER RULES
 */
+header h1 {
+	line-height: 2.5;
+	text-align: center;
+	padding-top: 25px;
+	font-size: 2.5em;
+}
 
-#contact {
-  align-self: center;
+/*
+	RESUME RULES
+*/
+.resume * {
+	margin: 2px;
+	padding: 2px;
+}
+ul {
+	list-style-position: inside;
+}
+.resume li {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.regen .title {
+	text-align: right;
+	font-size: 1.25em;
+	line-height: 2;
+}
+.regfa .title {
+	text-align: left;
+	font-size: 1.25em;
+	line-height: 2;
+}
+.regen .underline {
+	background-image: linear-gradient(to left, var(--dark), transparent);
+	border-radius: 30px;
+	height: 2px;
+	padding: 0px;
+}
+.regfa .underline {
+	background-image: linear-gradient(to right, var(--dark), transparent);
+	border-radius: 30px;
+	height: 2px;
+	padding: 0px;
+}
+
+/*
+	LAST UPDATE RULES
+*/
+#updt {
+	color: var(--shine);
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
 }
