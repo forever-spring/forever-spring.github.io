@@ -27,9 +27,6 @@
 .reg, .reg * {
 	font-family: kite;
 }
-body {
-	font-size: 14px;
-}
 
 /*
 	GENERAL RULES
@@ -41,11 +38,6 @@ a {
 	margin: 0px;
 	box-sizing: border-box;
 	color: var(--dark);
-	font-size: 1em;
-}
-body {
-	margin-top: 25px;
-	margin-bottom: 25px;
 }
 article{
 	padding: 25px;
@@ -76,10 +68,9 @@ ul li {
 	HEADER RULES
 */
 h1 {
-	padding: 25px;
+	padding: 10px;
 	line-height: 2.5;
 	text-align: center;
-	font-size: 2em;
 	font-weight: normal;
 }
 header {
@@ -90,15 +81,15 @@ header {
 	position: sticky;
 	top: 0px;
 	background-color: white;
-	margin: 25px;
-	border-bottom: 2px solid var(--shine);
-	margin-bottom: 0px;
+	padding: 5px;
+/* 	box-shadow: 0px 0px 5px var(--dark); */
 }
 nav{
-	padding: 10px;
+	text-align: center;
 }
 nav a {
-	padding: 10px;
+	padding: 5px;
+	margin: 5px;
 }
 nav a:hover {
 	color: var(--shine);
@@ -130,11 +121,12 @@ nav a:hover {
 	border: 1px solid var(--dark);
 }
 .btnav a:hover {
+	color: var(--shine);
 	border: 1px solid var(--shine);
 }
 #sig {
 	font-family: cks;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	text-align: right;
 	color: var(--shine);
 }
@@ -155,7 +147,7 @@ nav a:hover {
 	margin: 25px;
 }
 .qualttl {
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 .qualbdy {
 	display: flex;
@@ -179,8 +171,7 @@ nav a:hover {
 */
 #wip {
 	font-family: mono;
-	font-size: 2em;
+	font-size: 1.25rem;
 	text-align: center;
-	color: var(--dark);
 	margin: 50px;
 }
