@@ -6,12 +6,16 @@
 	--shine: rgba(255,113,91,1);
 }
 @font-face {
-	font-family: raleway;
-	src: url("fonts/Raleway-Regular.ttf");
+	font-family: kite;
+	src: url("fonts/kite-one.regular.ttf");
 }
 @font-face {
 	font-family: cks;
 	src: url("fonts/ConcettaKalvaniSignature.ttf");
+}
+@font-face {
+	font-family: mono;
+	src: url("fonts/monospace.medium.ttf");
 }
 
 /*
@@ -21,7 +25,7 @@
 	font-family: cks;
 }
 .reg, .reg * {
-	font-family: raleway;
+	font-family: kite;
 }
 body {
 	font-size: 14px;
@@ -40,9 +44,6 @@ a {
 	font-size: 1em;
 }
 body {
-	max-width: 700px;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
@@ -79,6 +80,7 @@ h1 {
 	line-height: 2.5;
 	text-align: center;
 	font-size: 2em;
+	font-weight: normal;
 }
 header {
 	display: flex;
@@ -105,9 +107,14 @@ nav a:hover {
 /*
 	ABOUT RULES
 */
+.about {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .profile {
 	display: block;
-	max-width: 200px;
+	max-width: 150px;
 	border-radius: 100px;
 	margin-right: auto;
 	margin-left: auto;
@@ -124,6 +131,12 @@ nav a:hover {
 }
 .btnav a:hover {
 	border: 1px solid var(--shine);
+}
+#sig {
+	font-family: cks;
+	font-size: 1.25em;
+	text-align: right;
+	color: var(--shine);
 }
 
 /*
@@ -165,9 +178,9 @@ nav a:hover {
 	PORTFOLIO RULES
 */
 #wip {
-	display:block;
-	max-width: 250px;
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
+	font-family: mono;
+	font-size: 2em;
+	text-align: center;
+	color: var(--dark);
+	margin: 50px;
 }
