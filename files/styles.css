@@ -33,23 +33,26 @@
 */
 a {
 	text-decoration: none;
+	font-size: 14px;
 }
 * {
 	margin: 0px;
-	box-sizing: border-box;
 	color: var(--dark);
 }
 article{
-	padding: 25px;
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
 }
 p {
+	font-size: 14px;
 	padding: 5px;
 	line-height: 1.5;
 	text-align: justify;
 }
 .logo {
 	display: inline;
-	width: 40px;
+	width: 20px;
 	padding: 10px;
 	vertical-align: middle;
 }
@@ -59,6 +62,7 @@ ul {
 }
 ul li {
 	padding: 2px;
+	font-size: 13px;
 }
 .sep {
 	height: 7px;
@@ -67,13 +71,17 @@ ul li {
 /*
 	HEADER RULES
 */
-h1 {
+h1 a{
 	padding: 10px;
 	line-height: 2.5;
 	text-align: center;
 	font-weight: normal;
+	font-size: 20px;
 }
 header {
+	width: 95vw;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -82,6 +90,8 @@ header {
 	top: 0px;
 	background-color: white;
 	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 /* 	box-shadow: 0px 0px 5px var(--dark); */
 }
 nav{
@@ -90,6 +100,7 @@ nav{
 nav a {
 	padding: 5px;
 	margin: 5px;
+	font-size: 13px;
 }
 nav a:hover {
 	color: var(--shine);
@@ -110,23 +121,22 @@ nav a:hover {
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 20px;
+	margin-top: 25px;
+	cursor: pointer;
 }
 .btnav {
-	text-align: center;
 	padding-bottom: 25px;
 }
 .btnav a {
-	padding: 5px;
 	border-radius: 5px;
 	border: 1px solid var(--dark);
 }
 .btnav a:hover {
-	color: var(--shine);
 	border: 1px solid var(--shine);
 }
 #sig {
 	font-family: cks;
-	font-size: 1.25rem;
+	font-size: 20px;
 	text-align: right;
 	color: var(--shine);
 }
@@ -144,10 +154,10 @@ nav a:hover {
 */
 
 .qualsec {
-	margin: 25px;
+	margin-bottom: 25px;
 }
 .qualttl {
-	font-size: 1.25rem;
+	font-size: 16px;
 }
 .qualbdy {
 	display: flex;
@@ -171,7 +181,7 @@ nav a:hover {
 */
 #wip {
 	font-family: mono;
-	font-size: 1.25rem;
+	font-size: 16px;
 	text-align: center;
 	margin: 50px;
 }
