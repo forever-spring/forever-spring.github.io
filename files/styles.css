@@ -83,7 +83,7 @@ body > div {
 	position: sticky;
 	top: 0px;
 	font-family: cute;
-	background-color: var(--warm);
+	background-color: var(--cool);
 	color: var(--light);
 	padding: 25px;
 	z-index: 1;
