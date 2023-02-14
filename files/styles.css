@@ -2,162 +2,149 @@
 	DEFINITIONS
 */
 :root {
-	--dark: rgba(38,70,83,1);
-	--shine: rgba(255,113,91,1);
+	--dark: #050609;
+	--light: #F7F7F9;
+	--shine: #FFB100;
+	--warm: #A62639;
+	--cool: #574AE2;
 }
 @font-face {
-	font-family: kite;
-	src: url("fonts/kite-one.regular.ttf");
+	font-family: norm;
+	src: url("fonts/pompiere.regular.ttf");
 }
 @font-face {
-	font-family: cks;
-	src: url("fonts/ConcettaKalvaniSignature.ttf");
+	font-family: fancy;
+	src: url("fonts/great-vibes.regular.ttf");
 }
 @font-face {
 	font-family: mono;
 	src: url("fonts/monospace.medium.ttf");
 }
-
-/*
-	FONT RULES
-*/
-.decor, .decor * {
-	font-family: cks;
-}
-.reg, .reg * {
-	font-family: kite;
+@font-face {
+	font-family: cute;
+	src: url("fonts/gnyrwn971.ttf");
 }
 
 /*
 	GENERAL RULES
 */
-a {
-	text-decoration: none;
-	font-size: 14px;
-}
+
 * {
 	margin: 0px;
-	color: var(--dark);
 }
-article{
-	width: 90vw;
-	margin-left: auto;
-	margin-right: auto;
+body {
+	background-color: var(--light);
 }
 p {
-	font-size: 14px;
 	padding: 5px;
-	line-height: 1.5;
-	text-align: justify;
+}
+a {
+	text-decoration: none;
+	color: var(--dark);
+}
+
+/*
+	ITEM RULES
+*/
+
+div:target::before {
+	display: block;
+	content: "";
+	height: 68px;
+}
+body > div {
+	background-color: var(--light);
+	z-index: 2;
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.seqttl {
+	font-family: norm;
+	font-size: 21px;
+	text-align: center;
+	color: var(--warm);
 }
 .logo {
 	display: inline;
-	width: 20px;
+	width: 15px;
 	padding: 10px;
 	vertical-align: middle;
+	margin-bottom: 10px;
 }
-ul {
-	list-style-image: url("img/bullet.png");
-	margin-left: 10px;
-}
-ul li {
-	padding: 2px;
-	font-size: 13px;
-}
-.sep {
-	height: 7px;
+.sepline {
+	height: 2px;
+	max-width: 500px;
+	margin: 15px auto 15px auto;
+	background-color: var(--warm);
 }
 
-/*
-	HEADER RULES
-*/
-h1 a{
-	padding: 10px;
-	line-height: 2.5;
-	text-align: center;
-	font-weight: normal;
-	font-size: 20px;
-}
-header {
-	width: 95vw;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-flow: row wrap;
+#about {
 	position: sticky;
 	top: 0px;
-	background-color: white;
-	padding: 5px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-/* 	box-shadow: 0px 0px 5px var(--dark); */
+	font-family: cute;
+	background-color: var(--warm);
+	color: var(--light);
+	padding: 25px;
+	z-index: 1;
 }
-nav{
-	text-align: center;
-}
-nav a {
-	padding: 5px;
-	margin: 5px;
-	font-size: 13px;
-}
-nav a:hover {
-	color: var(--shine);
-}
-
-/*
-	ABOUT RULES
-*/
-.about {
-	max-width: 700px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.profile {
+#propic {
 	display: block;
 	max-width: 150px;
-	border-radius: 100px;
-	margin-right: auto;
+	border-radius: 75px;
 	margin-left: auto;
-	margin-bottom: 20px;
-	margin-top: 25px;
-	cursor: pointer;
+	margin-right: auto;
+	margin-bottom: 25px;
 }
-.btnav {
-	padding-bottom: 25px;
-}
-.btnav a {
-	border-radius: 5px;
-	border: 1px solid var(--dark);
-}
-.btnav a:hover {
-	border: 1px solid var(--shine);
-}
-#sig {
-	font-family: cks;
-	font-size: 20px;
-	text-align: right;
-	color: var(--shine);
+#about p {
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 21px;
+	text-align: justify;
 }
 
-/*
-	CONTACT RULES
-*/
-
-.contact {
-	text-align: center;
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: var(--light);
+	background-attachment: fixed;
+	z-index: 3;
+}
+#myname {
+	font-family: fancy;
+	font-size: 30px;
+}
+nav a {
+	margin: 5px;
+	font-family: norm;
+	font-size: 17px;
+	padding: 5px;
+}
+nav a:hover {
+	border-bottom: 2px solid var(--shine);
 }
 
-/*
-	QUALIFICATIONS RULES
-*/
+#quals {
+	font-family: norm;
+}
 
 .qualsec {
+	max-width: 750px;
+	margin-right: auto;
+	margin-left: auto;
 	margin-bottom: 25px;
 }
 .qualttl {
-	font-size: 16px;
+	font-size: 21px;
 }
 .qualbdy {
 	display: flex;
@@ -166,7 +153,7 @@ nav a:hover {
 }
 .vertline {
 	align-self: stretch;
-	background-color: var(--shine);
+	background-color: var(--cool);
 	width: 2px;
 	margin-left: 20px;
 	margin-right: 50px;
@@ -175,13 +162,29 @@ nav a:hover {
 	align-self: center;
 	padding:5px;
 }
+.qualitms p {
+	font-size: 17px;
+}
+.qualitms ul {
+	list-style-image: url("img/bullet.png");
+	margin-left: 10px;
+}
+.qualitms li {
+	font-size: 15px;
+	padding: 2px;
+}
 
-/*
-	PORTFOLIO RULES
-*/
 #wip {
 	font-family: mono;
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
-	margin: 50px;
+}
+
+.contact {
+	font-family: norm;
+	text-align: center;
+	font-size: 17px;
+}
+.contact a {
+	font-size: 17px;
 }
