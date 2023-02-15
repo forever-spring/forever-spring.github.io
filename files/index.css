@@ -171,10 +171,37 @@ nav a:hover {
 	padding: 2px;
 }
 
-#wip {
-	font-family: mono;
-	font-size: 14px;
-	text-align: center;
+#portcards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 750px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.portsec {
+	box-shadow: 0px 0px 5px var(--cool);
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px;
+	border-radius: 10px;
+	margin: 25px;
+}
+.portsec:hover {
+	box-shadow: 0px 0px 10px var(--cool);
+/* 	border: 2px solid var(--shine); */
+}
+.portimg {
+	width: 50px;
+	margin-bottom: 25px;
+}
+.portsec span {
+	font-family: norm;
+	font-size: 17px;
+	text-transform: uppercase;
 }
 
 .contact {

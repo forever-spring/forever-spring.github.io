@@ -1,0 +1,88 @@
+/*
+	DEFINITIONS
+*/
+:root {
+	--dark: #050609;
+	--light: #F7F7F9;
+	--shine: #FFB100;
+	--warm: #A62639;
+	--cool: #574AE2;
+}
+@font-face {
+	font-family: norm;
+	src: url("fonts/pompiere.regular.ttf");
+}
+@font-face {
+	font-family: fancy;
+	src: url("fonts/great-vibes.regular.ttf");
+}
+@font-face {
+	font-family: mono;
+	src: url("fonts/monospace.medium.ttf");
+}
+@font-face {
+	font-family: cute;
+	src: url("fonts/gnyrwn971.ttf");
+}
+
+/*
+	GENERAL RULES
+*/
+
+* {
+	margin: 0px;
+}
+body {
+	background-color: var(--light);
+}
+p {
+	padding: 5px;
+}
+a {
+	text-decoration: none;
+	color: var(--dark);
+}
+
+/*
+    ITEM RULES
+*/
+
+.logo {
+	display: inline;
+	width: 15px;
+	padding: 10px;
+	vertical-align: middle;
+	margin-bottom: 10px;
+}
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: var(--light);
+	background-attachment: fixed;
+	z-index: 3;
+}
+#back {
+    font-family: norm;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+#myname {
+	font-family: fancy;
+	font-size: 30px;
+}
+
+#wip {
+    font-family: mono;
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0px 25px 0px;
+}
