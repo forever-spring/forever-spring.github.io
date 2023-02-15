@@ -122,8 +122,9 @@ header {
 nav a {
 	margin: 5px;
 	font-family: norm;
-	font-size: 17px;
+	font-size: 14px;
 	padding: 5px;
+	text-transform: uppercase;
 }
 nav a:hover {
 	border-bottom: 2px solid var(--shine);
