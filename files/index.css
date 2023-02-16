@@ -192,6 +192,8 @@ nav a:hover {
 }
 .portsec:hover {
 	box-shadow: 0px 0px 10px var(--cool);
+	padding-left: 30px;
+	padding-right: 30px;
 /* 	border: 2px solid var(--shine); */
 }
 .portimg {
