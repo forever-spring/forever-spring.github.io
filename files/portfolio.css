@@ -5,8 +5,8 @@
 	--dark: #050609;
 	--light: #F7F7F9;
 	--shine: #FFB100;
-	--warm: #A62639;
-	--cool: #574AE2;
+	--warm: #92140C;
+	--cool: #26d07c;
 }
 @font-face {
 	font-family: norm;
@@ -23,6 +23,10 @@
 @font-face {
 	font-family: cute;
 	src: url("fonts/gnyrwn971.ttf");
+}
+@keyframes hdr {
+  0% {width: 250px;}
+  100% {width: 95vw;}
 }
 
 /*
@@ -59,21 +63,30 @@ header {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	animation-name: hdr;
+	animation-duration: 1s;
+	animation-timing-function: linear;
 	align-items: center;
 	position: sticky;
 	top: 0px;
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 25px 10px 25px;
 	background-color: var(--light);
 	background-attachment: fixed;
 	z-index: 3;
+}
+header:defined {
+	width: inherit;
 }
 #back {
     font-family: norm;
     text-transform: uppercase;
     font-size: 17px;
+}
+#back:hover {
+	color: var(--shine);
+}
+#back:hover img {
+	content: url("img/backsh.png");
 }
 #myname {
 	font-family: fancy;
