@@ -2,11 +2,11 @@
 	DEFINITIONS
 */
 :root {
-	--dark: #050609;
-	--light: #F7F7F9;
-	--shine: #FFB100;
-	--warm: #92140C;
-	--cool: #26d07c;
+	--dark: #36393B;
+	--light: #FFFAFB;
+	--shine: #FFD23F;
+	--warm: #D33F49;
+	--cool: #26D07C;
 }
 @font-face {
 	font-family: norm;
